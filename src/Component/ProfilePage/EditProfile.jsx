@@ -15,7 +15,7 @@ const EditProfile = (props) => {
     let decodedToken=jwtDecode(token);
     console.log(decodedToken.id);
     useEffect(() => {
-       axios.get(`https://backend-ecocharge-zxez.onrender.com//api/user/getone/${decodedToken.id}`)
+       axios.get(`https://backend-ecocharge-zxez.onrender.com/api/user/getone/${decodedToken.id}`)
          .then((res) => {
          setUserData(res.data);
       console.log("return data",res.data);
@@ -36,14 +36,14 @@ const handleUpdate=(e)=>
  {
     e.preventDefault();
     if(userData){
-      axios.put(`https://backend-ecocharge-zxez.onrender.com//api/user/put/${userData?._id}`,userData)
+      axios.put(`https://backend-ecocharge-zxez.onrender.com/api/user/put/${userData?._id}`,userData)
       .then((res)=>{
         console.log(res.data)
         localStorage.setItem('userToken',res.data.token)
         props.newData(res.data);
         navigate('/profile');
       }).catch((err)=>{console.log(err)})
-    //  fetch(`https://backend-ecocharge-zxez.onrender.com//api/user/put/${userData?._id}`, 
+    //  fetch(`https://backend-ecocharge-zxez.onrender.com/api/user/put/${userData?._id}`, 
     //  {
     //     method: 'PUT',
         

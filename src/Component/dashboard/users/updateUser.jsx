@@ -27,7 +27,7 @@ setValue,
   } = useForm();
   useEffect(() => {
     
-  axios.get("https://backend-ecocharge-zxez.onrender.com//api/users/auth/user/"+userID,{ headers: {"authorization" : `Bearer ${token}`} })
+  axios.get("https://backend-ecocharge-zxez.onrender.com/api/users/auth/user/"+userID,{ headers: {"authorization" : `Bearer ${token}`} })
   .then(res=>{setUserDetails(res.data.data)
   setValue('name',res.data.data.name)
   setValue('email',res.data.data.email)
@@ -37,7 +37,7 @@ setValue,
   const onSubmit = (user) => {
   
     axios
-      .put("https://backend-ecocharge-zxez.onrender.com//api/users/auth/updateUser/"+userID,user,{ headers: {"authorization" : `Bearer ${token}`} })
+      .put("https://backend-ecocharge-zxez.onrender.com/api/users/auth/updateUser/"+userID,user,{ headers: {"authorization" : `Bearer ${token}`} })
       .then(({ data }) => {
         console.log(data);
         if (data.message === "updated success") {

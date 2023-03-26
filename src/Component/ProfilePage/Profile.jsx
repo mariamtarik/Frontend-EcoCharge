@@ -28,7 +28,7 @@ const Profile=(props)=>{
         let decodedToken=jwtDecode(token);
         console.log(decodedToken.id);
         useEffect(() => {
-           axios.get(`https://backend-ecocharge-zxez.onrender.com//api/user/getone/${decodedToken.id}`)
+           axios.get(`https://backend-ecocharge-zxez.onrender.com/api/user/getone/${decodedToken.id}`)
              .then((res) => {
              setUserData(res.data);
                 // console.log(res.data);

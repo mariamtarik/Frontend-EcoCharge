@@ -11,11 +11,11 @@ console.log(token)
 
     useEffect(() => {
       axios
-        .get("https://backend-ecocharge-zxez.onrender.com//api/users/auth/AllUsers",{ headers: {"authorization" : `Bearer ${token}`} })
+        .get("https://backend-ecocharge-zxez.onrender.com/api/users/auth/AllUsers",{ headers: {"authorization" : `Bearer ${token}`} })
         .then((res) => {setAllUsers(res.data.data)})
     },[token]);
     let deleteOne = (_id) => {
-        axios.delete(`https://backend-ecocharge-zxez.onrender.com//api/users/auth/deleteUser/${_id}`,{ headers: {"authorization" : `Bearer ${token}`} })
+        axios.delete(`https://backend-ecocharge-zxez.onrender.com/api/users/auth/deleteUser/${_id}`,{ headers: {"authorization" : `Bearer ${token}`} })
         .then((res) =>{
             setAllUsers((oldData)=>{return allUsers.filter((station)=>{ return station._id !== _id})})  
       });

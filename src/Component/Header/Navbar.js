@@ -36,7 +36,7 @@ const Navbar = (props) => {
       decodedToken = jwtDecode(token);
       axios
         .get(
-          `https://backend-ecocharge-zxez.onrender.com//api/user/getone/${decodedToken.id}`
+          `https://backend-ecocharge-zxez.onrender.com/api/user/getone/${decodedToken.id}`
         )
         .then((res) => {
           setUserData(res.data);

@@ -18,7 +18,7 @@ const StarRating = (props) => {
         useEffect(() => {
             if(rating)
             {
-            axios.post(`https://backend-ecocharge-zxez.onrender.com//api/rating/rateStation`,{rating,station:stationId},{
+            axios.post(`https://backend-ecocharge-zxez.onrender.com/api/rating/rateStation`,{rating,station:stationId},{
               headers:{
                 Authorization:`Bearer ${token}`
               }

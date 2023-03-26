@@ -20,7 +20,7 @@ export default function Register() {
   } = useForm();
   const onSubmit = (user) => {
     axios
-      .post("https://backend-ecocharge-zxez.onrender.com//api/users/auth/signup", user)
+      .post("https://backend-ecocharge-zxez.onrender.com/api/users/auth/signup", user)
       .then(({ data }) => {
         // console.log(data);
         if (data.message === "user registered successed") {
@@ -166,7 +166,7 @@ export default function Register() {
                   {/* <h5 style={{margin:"11px"}}>{strings.register.or}</h5> */}
                 </div>
               </Form>
-              {/* <Button onClick={()=>window.open('https://backend-ecocharge-zxez.onrender.com//auth/google/callback','_self')} className="d-flex justify-content-center align-items-center m-auto w-100 text-center btn text-white google">
+              {/* <Button onClick={()=>window.open('https://backend-ecocharge-zxez.onrender.com/auth/google/callback','_self')} className="d-flex justify-content-center align-items-center m-auto w-100 text-center btn text-white google">
                     <FcGoogle  className="text-2xl bg-white rounded-full mr-2" />{" "}
           {strings.register.continueWithGoogle}
                   </Button> */}

@@ -9,7 +9,7 @@
 
     
 //     useEffect(() => {
-//       axios.get('https://backend-ecocharge-zxez.onrender.com//auth/login/success',{
+//       axios.get('https://backend-ecocharge-zxez.onrender.com/auth/login/success',{
 //         withCredentials:true
 //       }).then(res=>{
 // console.log(res.data);

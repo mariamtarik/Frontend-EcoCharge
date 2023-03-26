@@ -23,7 +23,7 @@ getValues,
   } = useForm();
   const onSubmit = (user) => {
     axios
-      .post("https://backend-ecocharge-zxez.onrender.com//api/users/auth/signup",user,{ headers: {"authorization" : `Bearer ${token}`} })
+      .post("https://backend-ecocharge-zxez.onrender.com/api/users/auth/signup",user,{ headers: {"authorization" : `Bearer ${token}`} })
       .then(({ data }) => {
         
         if (data.message === "user registered successed") {

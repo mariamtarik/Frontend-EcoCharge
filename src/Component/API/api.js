@@ -2,7 +2,7 @@ import axios from "axios";
 import { Navigate } from "react-router";
 
 const requestWithOutToken = axios.create({
-  baseURL: "https://backend-ecocharge-zxez.onrender.com//api/",
+  baseURL: "https://backend-ecocharge-zxez.onrender.com/api/",
 });
 function config(){
     return {
@@ -10,7 +10,7 @@ function config(){
     }
 }
 const requestWithToken = axios.create({
-  baseURL: "https://backend-ecocharge-zxez.onrender.com//api/",
+  baseURL: "https://backend-ecocharge-zxez.onrender.com/api/",
 });
 const sendEmailForReset = async (email)=>{
 

@@ -8,7 +8,7 @@ const AvergeRating = (props) => {
     useEffect(() => {
       if (stationId) {
         axios
-          .get(`https://backend-ecocharge-zxez.onrender.com//api/rating/rateStation/${stationId}`)
+          .get(`https://backend-ecocharge-zxez.onrender.com/api/rating/rateStation/${stationId}`)
           .then((res) => {
             //  console.log(res.data.rate)
             setAverRating(res.data.rate) })

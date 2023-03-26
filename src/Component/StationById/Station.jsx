@@ -38,7 +38,7 @@ const  handleCharger =(e)=>{
   }
   const  handleSubmit =(e)=>{
 e.preventDefault()
-axios.post('https://backend-ecocharge-zxez.onrender.com//api/payment/create-checkout-session',formData,{
+axios.post('https://backend-ecocharge-zxez.onrender.com/api/payment/create-checkout-session',formData,{
   headers: {
     'Authorization': 'Bearer ' + localStorage.getItem('userToken')
   }
@@ -49,7 +49,7 @@ axios.post('https://backend-ecocharge-zxez.onrender.com//api/payment/create-chec
   useEffect(() => {
 
     axios
-      .get(`https://backend-ecocharge-zxez.onrender.com//api/stations/station/${stationId}`)
+      .get(`https://backend-ecocharge-zxez.onrender.com/api/stations/station/${stationId}`)
       .then((res) => {
         setStation(res.data.data)
         if (map.current) return;

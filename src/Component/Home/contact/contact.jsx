@@ -14,7 +14,7 @@ const Contact = () => {
   let handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`https://backend-ecocharge-zxez.onrender.com//api/email/sendEmail`, email)
+      .post(`https://backend-ecocharge-zxez.onrender.com/api/email/sendEmail`, email)
       .then((res) => {
         if (res.data.message === "success email") {
           setState(" Email sended successfully ");

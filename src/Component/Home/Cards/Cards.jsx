@@ -13,7 +13,7 @@ const Cards = () => {
   );
 
   useEffect(() => {
-    axios.get("https://backend-ecocharge-zxez.onrender.com//api/stations/AllStations").then((res) => {
+    axios.get("https://backend-ecocharge-zxez.onrender.com/api/stations/AllStations").then((res) => {
       setStation(res.data.data);
     });
   }, []);

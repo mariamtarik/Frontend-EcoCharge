@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://backend-ecocharge-zxez.onrender.com//api/users/auth/dashboard"
+        "https://backend-ecocharge-zxez.onrender.com/api/users/auth/dashboard"
       )
       .then((res) => setData(res.data));
   }, []);
